@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class LongestIncreasingSubSequence {
     public static void main(String[] args) {
-
+        int[] arr = new int[]{0, 8, 4, 5, 7, 2};
+        System.out.println(solveLIS(arr));
     }
 
     private static int solveLIS(int[] arr){
