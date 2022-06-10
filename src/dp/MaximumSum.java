@@ -1,6 +1,6 @@
 package dp;
 /*
-*You are given an array A of N integers and three integers B, C, and D.
+*You are given an array A of N integers and three integers B, C, & D.
 *You have to find the maximum value of A[i]*B + A[j]*C + A[k]*D, where 1 <= i <= j <= k <= N.
 * */
 public class MaximumSum {
