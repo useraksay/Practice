@@ -18,7 +18,7 @@ public class BuySellStocks4 {
             return 0;
         }
 
-//        stock is up for buying at i'th day, we have two options to buy and not buy.
+//        stock is up for buying on i'th day, we have two options to buy and not buy.
         if(buy == 1){
 //           if stock is bought on i'th day, profit reduces by -prices[i] and stock is up for selling.
 //           hence, buy = 0.
@@ -28,13 +28,13 @@ public class BuySellStocks4 {
 //           no fee charged
             int profit2 = 0 + solveBuyRecursion(i + 1, 1, fee, prices);
             return Math.max(profit1, profit2);
-        }else{  //stock is up for selling at i'th day, we have two options to sell and not sell.
+        }else{  //stock is up for selling on i'th day, we have two options to sell and not sell.
 
-//            if stock is sold at i'th day, profit exceeds by +prices[i] - fee.Since fee is charged
+//            if stock is sold on i'th day, profit exceeds by +prices[i] - fee.Since fee is charged
 //            stock is up for buying again.
             int profit1 = prices[i] - fee + solveBuyRecursion(i + 1, 1, fee, prices);
 
-//            if stock is not sold at i'th day. 0 profit is made.
+//            if stock is not sold on i'th day. 0 profit is made.
 //            stock is up of selling. no fee charged
             int profit2 = 0 + solveBuyRecursion(i + 1, 0, fee, prices);
             return Math.max(profit1, profit2);
